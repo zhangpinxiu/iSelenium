@@ -54,11 +54,12 @@ public abstract class WebUIBase {
             System.setProperty("javax.xml.parsers.DocumentBuilderFactory", "com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl");
             driver = new FirefoxDriver();
         } else if (curBrowser.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/Google/Chrome/chrome.exe");
+            System.setProperty("webdriver.chrome.driver", chromePath);
+            System.setProperty("webdriver.chrome.driver", "\u202AC:\\Users\\rongrong\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             driver = new ChromeDriver(chromeOptions);
-            System.setProperty("webdriver.chrome.driver", chromePath);
+
         } else if (curBrowser.equalsIgnoreCase("phantomjs")) {
             System.setProperty("phantomjs.binary.path", phantomjsPath);
             driver = new PhantomJSDriver();
