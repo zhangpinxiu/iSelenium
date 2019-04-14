@@ -55,11 +55,11 @@ public abstract class WebUIBase {
             driver = new FirefoxDriver();
         } else if (curBrowser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", chromePath);
-//             driver = new ChromeDriver();
+            driver = new ChromeDriver();
 //            driver=webdriver.Chrome("C:/Program Files (x86)/Google/Chrome/chrome.exe" );
-            ChromeOptions options = new ChromeOptions();
-            options.setBinary("C:/Users/rongrong/AppData/Local/Google/Chrome/Application/chrome.exe");
-            driver = new ChromeDriver(options);
+//             ChromeOptions options = new ChromeOptions();
+//             options.setBinary("C:/Users/rongrong/AppData/Local/Google/Chrome/Application/chrome.exe");
+//             driver = new ChromeDriver(options);
         } else if (curBrowser.equalsIgnoreCase("phantomjs")) {
             System.setProperty("phantomjs.binary.path", phantomjsPath);
             driver = new PhantomJSDriver();
