@@ -58,7 +58,7 @@ public abstract class WebUIBase {
 //             driver = new ChromeDriver();
 //            driver=webdriver.Chrome("C:/Program Files (x86)/Google/Chrome/chrome.exe" );
             ChromeOptions options = new ChromeOptions();
-            options.setBinary("C:\\Users\\rongrong\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+            options.setBinary("C:/Users/rongrong/AppData/Local/Google/Chrome/Application/chrome.exe");
             driver = new ChromeDriver(options);
         } else if (curBrowser.equalsIgnoreCase("phantomjs")) {
             System.setProperty("phantomjs.binary.path", phantomjsPath);
